@@ -1,0 +1,1 @@
+alert("in the plugin.js file");

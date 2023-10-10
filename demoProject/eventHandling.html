@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("input").focus(function(){
+                $(this).css({"background-color":"yellow"});
+            })
+            $("input").blur(function(){
+                $(this).css({"background-color":"green"})
+            })
+            /*$("p").mouseover(function(){
+                $(this).text("mouseOver");
+                $(this).css({"background-color":"red"})
+
+            })
+            $("p").mouseout(function(){
+                $(this).text("mouseOut");
+                $(this).css({"background-color":"green"})
+
+                
+            })*/
+            $("p").on({
+                mouseenter:function(){
+                        $(this).text("mouseOver").css({"background-color":"green"});},
+                mouseleave:function(){
+                        $(this).text("mouseOut").css({"background-color":"red"});},
+                click:function(){
+                    $(this).text("clicked").css({"background-color":"white"});}
+                
+
+                })
+                $("p").off();
+            })
+        </script>
+        <body>
+            <form>
+                <input type="text" value="john"></form><br>
+                <input type="text" value="john"></form><br>
+                <p>this is a para</p>
+            </form>
+        </body>
+    </html>
